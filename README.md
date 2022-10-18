@@ -29,8 +29,6 @@ You can also run this step directly with [Bitrise CLI](https://github.com/bitris
 
 ### Examples
 
-Check out [Workflow Recipes](https://github.com/bitrise-io/workflow-recipes#-key-based-caching-beta) for other platform-specific examples!
-
 #### Minimal example
 ```yaml
 steps:
@@ -40,6 +38,8 @@ steps:
     - command: install
 - save-npm-cache@1: {}
 ```
+
+Check out [Workflow Recipes](https://github.com/bitrise-io/workflow-recipes#-key-based-caching-beta) for other caching examples!
 
 
 ## ⚙️ Configuration
