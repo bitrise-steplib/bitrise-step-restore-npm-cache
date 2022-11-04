@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/bitrise-io/go-steputils/v2/stepconf"
+	"github.com/bitrise-io/go-utils/v2/command"
 	"github.com/bitrise-io/go-utils/v2/env"
 	"github.com/bitrise-io/go-utils/v2/log"
 	"github.com/bitrise-steplib/steps-restore-npm-cache/step"
@@ -17,7 +18,8 @@ func run() int {
 	logger := log.NewLogger()
 	envRepo := env.NewRepository()
 	inputParser := stepconf.NewInputParser(envRepo)
-	cacheStep := step.New(logger, inputParser, envRepo)
+	cmdFactory := command.NewFactory(envRepo)
+	cacheStep := step.New(logger, inputParser, envRepo, cmdFactory)
 
 	exitCode := 0
 
