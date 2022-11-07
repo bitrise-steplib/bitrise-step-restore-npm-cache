@@ -39,6 +39,8 @@ workflows:
         inputs:
         - content: |-
             rm -rf node_modules
+            pwd
+            echo $BITRISE_SOURCE_DIR
     - path::./:
         title: Execute step
         run_if: "true"
