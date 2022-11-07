@@ -17,7 +17,7 @@ const stepId = "restore-npm-cache"
 // OS + Arch: guarantees unique cache per stack (node_modules can contain compiled binaries)
 // checksum: NPM or Yarn lockfiles
 var keys = []string{
-	`{{ .OS }}-{{ .Arch }}-npm-cache-{{ checksum "**/package-lock.json" "**/yarn.lock" }}`,
+	`{{ .OS }}-{{ .Arch }}-npm-cache-{{ checksum "package-lock.json" "yarn.lock" }}`,
 	`{{ .OS }}-{{ .Arch }}-npm-cache-`,
 }
 

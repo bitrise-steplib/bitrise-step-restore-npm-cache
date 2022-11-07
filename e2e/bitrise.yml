@@ -31,7 +31,7 @@ workflows:
         is_skippable: false
         inputs:
         - key: |-
-            {{ .OS }}-{{ .Arch }}-npm-cache-{{ checksum "**/package-lock.json" "**/yarn.lock" }}
+            {{ .OS }}-{{ .Arch }}-npm-cache-{{ checksum "package-lock.json" "yarn.lock" }}
         - paths: node_modules
         - verbose: "true"
     - script:
