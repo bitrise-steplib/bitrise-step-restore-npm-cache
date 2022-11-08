@@ -26,7 +26,7 @@ workflows:
         - content: |-
             set -ex
             npm install
-    - save-cache:
+    - git::git@github.com:bitrise-steplib/bitrise-step-save-cache.git@main:
         run_if: "true"
         is_skippable: false
         inputs:
