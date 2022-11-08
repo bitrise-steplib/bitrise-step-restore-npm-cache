@@ -39,7 +39,6 @@ workflows:
         inputs:
         - content: |-
             rm -rf node_modules
-            sleep 120
     - path::./:
         title: Execute step
         run_if: "true"
