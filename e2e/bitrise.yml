@@ -50,6 +50,8 @@ workflows:
         inputs:
         - content: |-
             set -ex
+
+            echo $BITRISE_CACHE_HIT
             if [ ! -d node_modules ]; then
               echo "node_modules directory doesn't exist"
               exit 1
