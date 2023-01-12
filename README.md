@@ -2,7 +2,7 @@
 
 [![Step changelog](https://shields.io/github/v/release/bitrise-steplib/bitrise-step-restore-npm-cache?include_prereleases&label=changelog&color=blueviolet)](https://github.com/bitrise-steplib/bitrise-step-restore-npm-cache/releases)
 
-Restores cached node_modules dependencies. This Step needs to be used in combination with **Save NPM Cache**.
+Restores cached node_modules dependencies, used by NPM and Yarn. This Step needs to be used in combination with **Save NPM Cache**.
 
 <details>
 <summary>Description</summary>
@@ -10,6 +10,8 @@ Restores cached node_modules dependencies. This Step needs to be used in combina
 Restores cached node_modules dependencies. This Step needs to be used in combination with **Save NPM Cache**.
 
 This Step is based on [key-based caching](https://devcenter.bitrise.io/en/builds/caching/key-based-caching.html) and sets up the cache key and path automatically for NPM dependencies. If you'd like to change the cache keys, you might want to use the generic [Restore cache](https://github.com/bitrise-steplib/bitrise-step-restore-cache) Step instead.
+
+Note: NPM and Yarn package managers are both supported.
 
 #### Related steps
 
@@ -54,7 +56,10 @@ Check out [Workflow Recipes](https://github.com/bitrise-io/workflow-recipes#-key
 
 <details>
 <summary>Outputs</summary>
-There are no outputs defined in this step
+
+| Environment Variable | Description |
+| --- | --- |
+| `BITRISE_CACHE_HIT` | Indicates if a cache entry was restored. Possible values:  - `exact`: Exact cache hit for the first requested cache key - `partial`: Cache hit for a key other than the first - `false` No cache hit, nothing was restored |
 </details>
 
 ## 🙋 Contributing

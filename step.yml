@@ -1,9 +1,11 @@
 title: Restore NPM Cache (Beta)
-summary: Restores cached node_modules dependencies. This Step needs to be used in combination with **Save NPM Cache**.
+summary: Restores cached node_modules dependencies, used by NPM and Yarn. This Step needs to be used in combination with **Save NPM Cache**.
 description: |
   Restores cached node_modules dependencies. This Step needs to be used in combination with **Save NPM Cache**.
 
   This Step is based on [key-based caching](https://devcenter.bitrise.io/en/builds/caching/key-based-caching.html) and sets up the cache key and path automatically for NPM dependencies. If you'd like to change the cache keys, you might want to use the generic [Restore cache](https://github.com/bitrise-steplib/bitrise-step-restore-cache) Step instead.
+
+  Note: NPM and Yarn package managers are both supported.
 
   #### Related steps
 
@@ -38,3 +40,14 @@ inputs:
     value_options:
     - "true"
     - "false"
+
+outputs:
+- BITRISE_CACHE_HIT:
+  opts:
+    title: Cache hit
+    description: |-
+      Indicates if a cache entry was restored. Possible values:
+
+      - `exact`: Exact cache hit for the first requested cache key
+      - `partial`: Cache hit for a key other than the first
+      - `false` No cache hit, nothing was restored
