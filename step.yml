@@ -1,4 +1,4 @@
-title: Restore NPM Cache (Beta)
+title: Restore NPM Cache
 summary: Restores cached node_modules dependencies, used by NPM and Yarn. This Step needs to be used in combination with **Save NPM Cache**.
 description: |
   Restores cached node_modules dependencies. This Step needs to be used in combination with **Save NPM Cache**.
