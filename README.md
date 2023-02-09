@@ -1,4 +1,4 @@
-# Restore NPM Cache (Beta)
+# Restore NPM Cache
 
 [![Step changelog](https://shields.io/github/v/release/bitrise-steplib/bitrise-step-restore-npm-cache?include_prereleases&label=changelog&color=blueviolet)](https://github.com/bitrise-steplib/bitrise-step-restore-npm-cache/releases)
 
@@ -27,9 +27,6 @@ Add this step directly to your workflow in the [Bitrise Workflow Editor](https:/
 
 You can also run this step directly with [Bitrise CLI](https://github.com/bitrise-io/bitrise).
 
-⚠️ **Beta status**: While this Step is in beta, everyone can use it without restrictions, quotas or costs.
-
-### Examples
 
 #### Minimal example
 ```yaml

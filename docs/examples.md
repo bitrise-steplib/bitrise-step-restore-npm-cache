@@ -1,6 +1,3 @@
-⚠️ **Beta status**: While this Step is in beta, everyone can use it without restrictions, quotas or costs.
-
-### Examples
 
 #### Minimal example
 ```yaml
