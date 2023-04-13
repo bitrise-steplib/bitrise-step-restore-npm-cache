@@ -1,4 +1,4 @@
-module github.com/bitrise-steplib/steps-restore-npm-cache
+module github.com/bitrise-steplib/bitrise-step-restore-npm-cache
 
 go 1.17
 
