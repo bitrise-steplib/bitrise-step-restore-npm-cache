@@ -18,7 +18,6 @@ const stepId = "restore-npm-cache"
 // checksum: NPM or Yarn lockfiles
 var keys = []string{
 	`{{ .OS }}-{{ .Arch }}-npm-cache-{{ checksum "package-lock.json" "yarn.lock" }}`,
-	`{{ .OS }}-{{ .Arch }}-npm-cache-`,
 }
 
 type Input struct {
