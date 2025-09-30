@@ -1,4 +1,4 @@
-# Restore NPM Cache
+# Restore NPM Cache (test)
 
 [![Step changelog](https://shields.io/github/v/release/bitrise-steplib/bitrise-step-restore-npm-cache?include_prereleases&label=changelog&color=blueviolet)](https://github.com/bitrise-steplib/bitrise-step-restore-npm-cache/releases)
 
