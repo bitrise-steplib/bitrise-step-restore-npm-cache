@@ -49,6 +49,7 @@ Check out [Workflow Recipes](https://github.com/bitrise-io/workflow-recipes#-key
 | Key | Description | Flags | Default |
 | --- | --- | --- | --- |
 | `verbose` | Enable logging additional information for troubleshooting | required | `false` |
+| `retries` | Number of retries to attempt when downloading a cache archive fails.  The value 0 means no retries are attempted. | required | `3` |
 </details>
 
 <details>
