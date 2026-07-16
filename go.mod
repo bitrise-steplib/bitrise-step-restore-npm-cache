@@ -3,7 +3,7 @@ module github.com/bitrise-steplib/steps-restore-npm-cache
 go 1.22
 
 require (
-	github.com/bitrise-io/go-steputils/v2 v2.0.0-alpha.51
+	github.com/bitrise-io/go-steputils/v2 v2.0.0-alpha.52
 	github.com/bitrise-io/go-utils/v2 v2.0.0-alpha.34
 )
 
