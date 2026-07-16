@@ -24,7 +24,7 @@ workflows:
         is_skippable: false
         inputs:
         - key: |-
-            {{ .OS }}-{{ .Arch }}-npm-cache-{{ checksum "package-lock.json" "yarn.lock" }}
+            {{ getenv "BITRISEIO_STACK_ID" }}-npm-cache-{{ checksum "package-lock.json" "yarn.lock" }}
         - paths: node_modules
         - verbose: "true"
     - script:
@@ -38,6 +38,8 @@ workflows:
         is_skippable: false
         inputs:
         - verbose: "true"
+        - key: |-
+            {{ getenv "BITRISEIO_STACK_ID" }}-npm-cache-{{ checksum "package-lock.json" "yarn.lock" }}
     - script:
         title: Verify restored folder
         inputs:
